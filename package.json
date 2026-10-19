@@ -1,0 +1,33 @@
+{
+  "name": "marknote-studio",
+  "productName": "MarkNote Studio",
+  "version": "1.0.0",
+  "description": "마크다운 문법을 몰라도 워드/노션처럼 쉽고 깔끔하게 작성하는 비주얼 마크다운 편집기",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "npm run build && node scripts/launch.js",
+    "build": "node scripts/build.js",
+    "dist": "npm run build && electron-builder --win",
+    "test": "node test/test-in-browser.js"
+  },
+  "devDependencies": {
+    "electron": "44.8.0",
+    "esbuild": "^0.28.2"
+  },
+  "dependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/extension-link": "^3.32.0",
+    "@tiptap/extension-table": "^3.32.0",
+    "@tiptap/extension-table-cell": "^3.32.0",
+    "@tiptap/extension-table-header": "^3.32.0",
+    "@tiptap/extension-table-row": "^3.32.0",
+    "@tiptap/extension-underline": "^3.32.0",
+    "@tiptap/starter-kit": "^3.32.0",
+    "dompurify": "^3.4.17",
+    "marked": "^18.1.1",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "electron-updater": "^6.8.9"
+  }
+}

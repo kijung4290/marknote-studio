@@ -1,0 +1,32 @@
+appId: com.kijung4290.marknotestudio
+productName: MarkNote Studio
+copyright: Copyright © 2026 kijung4290
+directories:
+  output: dist-release
+files:
+  - index.html
+  - main.js
+  - preload.js
+  - dist/**
+  - package.json
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+nsis:
+  artifactName: ${productName}-Setup-${version}.${ext}
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: MarkNote Studio
+portable:
+  artifactName: ${productName}-Portable-${version}.${ext}
+publish:
+  provider: github
+  owner: kijung4290
+  repo: marknote-studio
